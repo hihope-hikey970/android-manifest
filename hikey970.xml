@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <!-- remote name="github"
+	  fetch="https://github.com/hihope-hikey970/"/
+	  revision="refs/heads/android-9.0.0_r34" -->
+  
   <remote name="github"
-	  fetch="../../hikey970/"/>
+	  fetch="../../hikey970/"
+	  revision="refs/heads/android-9.0.0_r34"/>
 
   <remove-project path="device/linaro/hikey" name="device/linaro/hikey" />
   <remove-project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" />
@@ -9,20 +14,21 @@
   <remove-project path="device/linaro/bootloader/edk2" name="device/linaro/bootloader/edk2" />
   <remove-project path="device/linaro/bootloader/OpenPlatformPkg" name="device/linaro/bootloader/OpenPlatformPkg" />
 
-  <project path="device/linaro/hikey" name="aosp-device-linaro-hikey" revision="hikey970_v1.0" remote="github" groups="default">
+  <project path="kernel/hikey-linaro" name="linux" revision="hikey970-v4.9" remote="github" groups="default" />
+  <project path="device/linaro/bootloader/arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey970_v1.0" remote="github" groups="default" />
+  <project path="device/linaro/bootloader/edk2" name="edk2" revision="hikey970_v1.0" remote="github" groups="default" />
+  <project path="device/linaro/bootloader/OpenPlatformPkg" name="OpenPlatformPkg" revision="hikey970_v1.0" remote="github" groups="default" />
+  
+  <project path="device/linaro/hikey-kernel" name="aosp-device-linaro-hikey-kernel" remote="github" groups="default" />
+
+  <project path="device/linaro/hikey" name="aosp-device-linaro-hikey" remote="github" groups="default">
     <linkfile src="l-loader/build_uefi.sh" dest="build_uefi.sh" />
   </project>
 
-  <project path="device/linaro/tool/tools-images-hikey970" name="tools-images-hikey970" revision="hikey970_v1.0" remote="github" groups="default">
+  <project path="device/linaro/tool/tools-images-hikey970" name="tools-images-hikey970" remote="github" groups="default">
     <linkfile src="build_kernel.sh" dest="build_kernel.sh" />
     <linkfile src="build_bootimage.sh" dest="build_bootimage.sh" />
     <linkfile src="copy_images_out.sh" dest="copy_images_out.sh" />
   </project>
-
-  <project path="kernel/hikey-linaro" name="linux" revision="hikey970-v4.9" remote="github" groups="default" />
-  <project path="device/linaro/hikey-kernel" name="aosp-device-linaro-hikey-kernel" revision="hikey970_v1.0" remote="github" groups="default" />
-  <project path="device/linaro/bootloader/arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey970_v1.0" remote="github" groups="default" />
-  <project path="device/linaro/bootloader/edk2" name="edk2" revision="hikey970_v1.0" remote="github" groups="default" />
-  <project path="device/linaro/bootloader/OpenPlatformPkg" name="OpenPlatformPkg" revision="hikey970_v1.0" remote="github" groups="default" />
 
 </manifest>
