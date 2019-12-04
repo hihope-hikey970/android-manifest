@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="github"
-	  fetch="http://www.hihopesrv.com/hikey970/"
-	  review="ssh://zhang_lijun1@0.0.0.0:29418/hikey970/" />
+	  fetch="../../hikey970/"/>
 
   <remove-project path="device/linaro/hikey" name="device/linaro/hikey" />
   <remove-project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" />
