@@ -3,10 +3,10 @@
   <!-- Repositories -->
   <remote name="github"
 	  fetch="https://github.com/hihope-hikey970/"
-	  revision="refs/heads/android-p-preview-1" />
+	  revision="refs/heads/android-9.0.0_r34" />
   <!--remote name="github"
 	  fetch="../../hikey970/"
-	  revision="refs/heads/android-p-preview-1" /-->
+	  revision="refs/heads/android-9.0.0_r34" /-->
   <remove-project path="device/linaro/hikey" name="device/linaro/hikey" />
   <remove-project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" />
   <remove-project path="device/linaro/bootloader/arm-trusted-firmware" name="device/linaro/bootloader/arm-trusted-firmware" />
